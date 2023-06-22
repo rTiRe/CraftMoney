@@ -1,0 +1,4 @@
+name: CraftMoney
+version: '1.0'
+main: ru.rtire.craftmoney.CraftMoney
+api-version: '1.20'

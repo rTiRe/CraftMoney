@@ -1,0 +1,4 @@
+name: CraftMoney
+version: '${project.version}'
+main: ru.rtire.craftmoney.CraftMoney
+api-version: '1.20'
