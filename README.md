@@ -1,0 +1,2 @@
+# CraftMoney
+yes
