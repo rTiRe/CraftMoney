@@ -33,6 +33,8 @@ public final class CraftMoney extends JavaPlugin {
         meta.setDisplayName(getConfig().getString("displayName"));
         meta.addEnchant(Enchantment.MENDING, 10, true);
         meta.setLore(getConfig().getStringList("lore"));
+        meta.setCustomModelData(getConfig().getInt("customModelData"));
+        meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         CommandBlock.setItemMeta(meta);
 
         ShapelessRecipe recipe = new ShapelessRecipe(new NamespacedKey(this, "command_block"), CommandBlock);
