@@ -3,7 +3,9 @@ package ru.rtire.craftmoney;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.enchantments.Enchantment;
+import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.RecipeChoice;
 import org.bukkit.inventory.ShapelessRecipe;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.recipe.CraftingBookCategory;
@@ -39,10 +41,10 @@ public final class CraftMoney extends JavaPlugin {
 
         ShapelessRecipe recipe = new ShapelessRecipe(new NamespacedKey(this, "command_block"), CommandBlock);
 
-        recipe.addIngredient(Material.DEEPSLATE_COPPER_ORE);
-        recipe.addIngredient(Material.DEEPSLATE_DIAMOND_ORE);
-        recipe.addIngredient(Material.GOLD_ORE);
-        recipe.addIngredient(Material.IRON_ORE);
+        recipe.addIngredient(new RecipeChoice.MaterialChoice(Material.DEEPSLATE_COPPER_ORE, Material.COPPER_ORE));
+        recipe.addIngredient(new RecipeChoice.MaterialChoice(Material.DEEPSLATE_DIAMOND_ORE, Material.DIAMOND_ORE));
+        recipe.addIngredient(new RecipeChoice.MaterialChoice(Material.DEEPSLATE_GOLD_ORE, Material.GOLD_ORE));
+        recipe.addIngredient(new RecipeChoice.MaterialChoice(Material.DEEPSLATE_IRON_ORE, Material.IRON_ORE));
         recipe.setCategory(CraftingBookCategory.MISC);
         getServer().addRecipe(recipe);
     }

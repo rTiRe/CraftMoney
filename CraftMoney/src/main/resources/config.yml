@@ -1,5 +1,4 @@
-displayName: "Деньга"
+displayName: "§r§rКоин"
 lore:
-  - "Что богатый, да?"
-  - "Ну и иди нахуй."
+  - "§r§7Официальная валюта"
 customModelData: 4
